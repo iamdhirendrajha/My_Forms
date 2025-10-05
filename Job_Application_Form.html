@@ -1,0 +1,68 @@
+<!-- Task: Create a job application with these fields:
+- Name (text, required)
+- Email (email, required)
+- Phone (tel with 10 digit pattern)
+- Expected Salary (number, min 300000, max 5000000)
+- Joining Date (date, min today's date)
+- Resume Upload (file, PDF/DOC only)
+- Portfolio Link (url)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        
+        <meta name="Author" content="Dhirendra Jha">
+        <meta name="deceription" content="">
+        <meta name="Keywords" content="">
+        <title>Job Application</title>
+    </head>
+    <body>
+        <h1>Job Application Form : </h1>
+        <form action="/submit" method="post">
+            <!-- INPUT: Name, Email, Phone, ... -->
+             <label for="name">Name: </label>
+             <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+             <br><br>
+
+             <label for="email">Email: </label>
+             <input type="email" id="email" name="email" placeholder="you@example.com" required>
+             <br><br>
+
+             <label for="Phone">Phone: </label>
+             <input type="tel" id="Phone" name="Phone Number" placeholder="9874563210" pattern="[0-9]{10}">
+             <br><br>
+
+             <!-- Expected Salary -->
+              <label for="salary">Expected Salary:</label>
+              <input type="number" id="salary" name="salary" min="300000" max="500000" value="350000">
+              <br><br>
+
+             <!-- Date & Time -->
+             <label for="eventDate">Event Date</label>
+             <input type="date" id="eventDate" name="eventDate" min="2000-01-01">
+             <br><br>
+
+             <label for="eventTime">Event Time</label>
+             <input type="time" id="eventTime" name="eventTime" >
+             <br><br>
+            
+             <!-- File Submiting -->
+             <label for="myfie">Upload Your File (PDF, DOC Only):</label>
+             <input type="file" id="myfile" name="myfile" accept=".pdf, .doc">
+             <br><br>
+
+             <!-- Portfolio Link -->
+              <label for="website">Website Link:</label>
+              <input type="url" id="website" name="website" placeholder="https://example.com">
+              <br><br>
+
+             <!-- Submit BUtton -->
+             <button type="submit">Submit Form</button>
+             <button type="reset">Clear Form</button>
+        </form>
+    </body>
+
+</html>
