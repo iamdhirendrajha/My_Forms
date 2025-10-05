@@ -1,0 +1,107 @@
+<!-- Task: Create a food order form with:
+1. Fieldset "Customer Details":
+   - Name, Phone, Address (textarea)
+
+2. Fieldset "Order Details":
+   - Meal type (radio): Veg, Non-Veg, Vegan
+   - Add-ons (checkboxes): Extra Cheese, Garlic Bread, Coke, Salad
+   - Delivery time (select): ASAP, 30 mins, 1 hour, 2 hours
+
+3. Fieldset "Special Instructions":
+   - Allergies (text)
+   - Special requests (textarea)
+   
+4. Submit button "Place Order"
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order Form</title>
+</head>
+<body>
+    <h1>Food Order Form</h1>
+    <form action="/submit" method="post">
+        <!-- FIELDSET 1 :Customer Details -->
+        <fieldset>
+
+            <legend>Customer Details</legend>
+
+            <label for="name"><b>Name: </b></label>
+             <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+             <br><br>
+
+             <label for="Phone"><b>Phone: </b></label>
+             <input type="tel" id="Phone" name="Phone Number" placeholder="9874563210" pattern="[0-9]{10}" required>
+             <br><br>
+
+             <label for="addres"><b>Address: </b></label><br>
+             <textarea name="address" id="address" rows="5" cols="50" placeholder="Type your address here..." required></textarea>
+
+        </fieldset>
+
+         <!-- FIELDSET 2: Order Details  -->
+        <fieldset>
+            <legend>Order Details</legend>
+
+            <!-- Meal Type (Radio Buttons) -->
+            <p><b>Meal Type:</b></p>
+            <input type="radio" id="veg" name="mealType" value="Veg" required>
+            <label for="veg">Veg</label><br>
+
+            <input type="radio" id="nonveg" name="mealType" value="Non-Veg">
+            <label for="nonveg">Non-Veg</label><br>
+
+            <input type="radio" id="vegan" name="mealType" value="Vegan">
+            <label for="vegan">Vegan</label><br><br>
+
+            <!-- Add-ons (Checkboxes) -->
+            <p><b>Add-ons:</b></p>
+            <input type="checkbox" id="cheese" name="addons" value="Extra Cheese">
+            <label for="cheese">Extra Cheese</label><br>
+
+            <input type="checkbox" id="bread" name="addons" value="Garlic Bread">
+            <label for="bread">Garlic Bread</label><br>
+
+            <input type="checkbox" id="coke" name="addons" value="Coke">
+            <label for="coke">Coke</label><br>
+
+            <input type="checkbox" id="salad" name="addons" value="Salad">
+            <label for="salad">Salad</label><br><br>
+
+            <!-- Delivery Time (Select Menu) -->
+            <label for="deliveryTime"><b>Delivery Time:</b></label><br>
+            <select id="deliveryTime" name="deliveryTime" required>
+                <option value="">--Select--</option>
+                <option value="ASAP">ASAP</option>
+                <option value="30 mins">30 mins</option>
+                <option value="1 hour">1 hour</option>
+                <option value="2 hours">2 hours</option>
+            </select>
+        </fieldset>
+
+        <br><br>
+
+        <!-- Fieldset 3: Special Instructions -->
+        <fieldset>
+            <legend>Special Instructions</legend>
+
+            <!-- Allergies -->
+            <label for="allergies"><b>Allergies (if any):</b></label><br>
+            <input type="text" id="allergies" name="allergies" placeholder="e.g., peanuts, milk"><br><br>
+
+            <!-- Special Requests -->
+            <label for="requests"><b>Special Requests:</b></label><br>
+            <textarea id="requests" name="requests" rows="4" cols="40" placeholder="Write any specific requests..."></textarea>
+        </fieldset>
+        <br>
+
+        <!-- Submit Button -->
+        <!-- <button type="submit">Submit Form</button> -->
+        <input type="submit" value="Place Order">
+    </form>
+    
+</body>
+</html>

@@ -15,9 +15,9 @@
         <meta name="viewport" content="width=device-width, intial-scale=1.0">
         
         <meta name="Author" content="Dhirendra Jha">
-        <meta name="deceription" content="">
-        <meta name="Keywords" content="">
-        <title>Job Application</title>
+        <meta name="deceription" content="A Job Application Form">
+        <meta name="Keywords" content="INPUT: Name. Email, Phone">
+        <title>Application Form</title>
     </head>
     <body>
         <h1>Job Application Form : </h1>
@@ -32,7 +32,7 @@
              <br><br>
 
              <label for="Phone">Phone: </label>
-             <input type="tel" id="Phone" name="Phone Number" placeholder="9874563210" pattern="[0-9]{10}">
+             <input type="tel" id="Phone" name="Phone Number" placeholder="9874563210" pattern="[0-9]{10}" required>
              <br><br>
 
              <!-- Expected Salary -->
@@ -40,17 +40,19 @@
               <input type="number" id="salary" name="salary" min="300000" max="500000" value="350000">
               <br><br>
 
-             <!-- Date & Time -->
-             <label for="eventDate">Event Date</label>
+             <!-- Joining Date -->
+             <label for="eventDate">Joining Date</label>
              <input type="date" id="eventDate" name="eventDate" min="2000-01-01">
              <br><br>
 
-             <label for="eventTime">Event Time</label>
-             <input type="time" id="eventTime" name="eventTime" >
-             <br><br>
-            
+             
+            <!-- or Dare and Time _ Local
+            <label for="date-time" >Date and Time:</label>
+            <input type="datetime-local" id="date-time" name="date-time">
+            <br><br> --> 
+
              <!-- File Submiting -->
-             <label for="myfie">Upload Your File (PDF, DOC Only):</label>
+             <label for="myfie">Upload Your File (PDF, DOC Only):</label><br>
              <input type="file" id="myfile" name="myfile" accept=".pdf, .doc">
              <br><br>
 
